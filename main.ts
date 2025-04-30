@@ -45,4 +45,4 @@ let mySprite2 = sprites.create(img`
     f f f f f f f f f f f f f f f f 
     `, SpriteKind.Teeth)
 mySprite.setPosition(randint(0, scene.screenWidth()), randint(0, scene.screenHeight()))
-info.startCountdown(10)
+info.startCountdown(1.25)
