@@ -1,6 +1,9 @@
 namespace SpriteKind {
     export const Teeth = SpriteKind.create()
 }
+info.onCountdownEnd(function () {
+    game.gameOver(false)
+})
 sprites.onOverlap(SpriteKind.Food, SpriteKind.Teeth, function (sprite, otherSprite) {
     game.gameOver(true)
 })
@@ -42,3 +45,4 @@ let mySprite2 = sprites.create(img`
     f f f f f f f f f f f f f f f f 
     `, SpriteKind.Teeth)
 mySprite.setPosition(randint(0, scene.screenWidth()), randint(0, scene.screenHeight()))
+info.startCountdown(10)
